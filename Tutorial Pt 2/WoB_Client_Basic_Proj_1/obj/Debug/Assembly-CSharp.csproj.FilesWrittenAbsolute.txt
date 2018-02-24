@@ -1,0 +1,14 @@
+/Users/mac/Downloads/WoB_Client_Basic/Temp/bin/Debug/UnityEngine.dll
+/Users/mac/Downloads/WoB_Client_Basic/Temp/bin/Debug/UnityEditor.dll
+/Users/mac/Downloads/WoB_Client_Basic/Temp/bin/Debug/UnityEngine.Networking.dll
+/Users/mac/Downloads/WoB_Client_Basic/Temp/bin/Debug/UnityEngine.UI.dll
+/Users/mac/Downloads/WoB_Client_Basic/Temp/bin/Debug/Mono.Data.Sqlite.dll
+/Users/mac/Downloads/WoB_Client_Basic/Temp/bin/Debug/Mono.Cecil.dll
+/Users/mac/Downloads/WoB_Client_Basic/Temp/bin/Debug/Unity.SerializationLogic.dll
+/Users/mac/Downloads/WoB_Client_Basic/Temp/bin/Debug/Unity.DataContract.dll
+/Users/mac/Downloads/WoB_Client_Basic/Temp/bin/Debug/ICSharpCode.NRefactory.dll
+/Users/mac/Downloads/WoB_Client_Basic/Temp/bin/Debug/Unity.UNetWeaver.dll
+/Users/mac/Downloads/WoB_Client_Basic/Temp/bin/Debug/Unity.UNetWeaver.dll.mdb
+/Users/mac/Downloads/WoB_Client_Basic/Temp/bin/Debug/Unity.CecilTools.dll
+/Users/mac/Downloads/WoB_Client_Basic/Temp/bin/Debug/Mono.Cecil.Pdb.dll
+/Users/mac/Downloads/WoB_Client_Basic/Temp/bin/Debug/Mono.Cecil.Mdb.dll
