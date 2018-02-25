@@ -68,6 +68,7 @@
      <Compile Include="Assets\Scripts\Main.cs" />
      <Compile Include="Assets\Scripts\MessageQueue.cs" />
      <Compile Include="Assets\Scripts\MouseCollision.cs" />
+     <Compile Include="Assets\Scripts\ScaleAnimals.cs" />
      <Compile Include="Assets\Scripts\SpeciesData.cs" />
      <Compile Include="Assets\Scripts\SpeciesTable.cs" />
      <Compile Include="Assets\Scripts\TestSceneScript.cs" />

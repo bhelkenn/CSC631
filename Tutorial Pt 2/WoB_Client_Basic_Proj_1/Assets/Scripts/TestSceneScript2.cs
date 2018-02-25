@@ -24,10 +24,10 @@ public class TestSceneScript2 : MonoBehaviour {
 		if (Input.GetKeyDown ("a")) {
 			MakeAnimal (1);
 		}
-		if(Input.GetKeyDown ("s")){
+		if (Input.GetKeyDown ("s")) {
 			MakeAnimal (2);
 		}
-		if(Input.GetKeyDown ("d")){
+		if (Input.GetKeyDown ("d")) {
 			MakeAnimal (3);
 		}
 
