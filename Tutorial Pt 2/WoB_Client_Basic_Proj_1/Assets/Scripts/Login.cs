@@ -5,6 +5,7 @@ using System.Collections;
 using System.IO;
 using System.Net.Sockets;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Login : MonoBehaviour {
 	
@@ -18,6 +19,7 @@ public class Login : MonoBehaviour {
 	private string password = "";
 	private Rect windowRect;
 	private bool isHidden;
+	public Button btn;
 	
 	void Awake() {
 		//mainObject = GameObject.Find("MainObject");
@@ -27,7 +29,12 @@ public class Login : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start() {
+		Button login = btn.GetComponent<Button> ();
+		login.onClick.AddListener (TaskOnClick);
+	}
 
+	void TaskOnClick() {
+		SceneManager.LoadScene ("TestScene");
 	}
 	
 	void OnGUI() {

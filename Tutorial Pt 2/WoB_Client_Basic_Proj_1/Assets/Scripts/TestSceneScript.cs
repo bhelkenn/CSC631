@@ -1,10 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 
 public class TestSceneScript : MonoBehaviour {
 		public GameObject terrainNew;
+		public Button btn;
 		private Rect windowRect;
 	// Use this for initialization
 	void Start () {
@@ -15,13 +17,12 @@ public class TestSceneScript : MonoBehaviour {
 		GameObject newTerrain =(GameObject) Instantiate (terrainNew , position , rotation);
 		newTerrain.name = "new terrain";
 		newTerrain.layer = 9;
-		
+		Button home = btn.GetComponent<Button> ();
+		home.onClick.AddListener (TaskOnClick);
 	}
 
-	void OnGUI() {
-		if (GUI.Button(new Rect(Screen.width / 2 - 50 , 335, 100, 25), "Home")) {
-			SceneManager.LoadScene("Login");
-		}
+	void TaskOnClick() {
+		SceneManager.LoadScene("Login");
 	}
 	
 

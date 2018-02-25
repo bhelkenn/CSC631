@@ -37,13 +37,12 @@ public class TestSceneScript2 : MonoBehaviour {
 	
 	}
 
-		void MakeAnimal(int type = 0){
+		void MakeAnimal(int type){
 				screenPosition = Camera.main.ScreenToWorldPoint(new Vector3(Random.Range(0,Screen.width), Random.Range(-300,Screen.height), 40));
 				screenPosition.y = Terrain.activeTerrain.SampleHeight(screenPosition);
 				newAnimal = Instantiate(dummy, screenPosition, Quaternion.identity) as GameObject;
 				//Debug.Log (newAnimal.transform.Find("Plane").GetComponent<Renderer>().material);
 				if (type == 1) {
-						
 						newAnimal.transform.Find ("Plane").GetComponent<Renderer>().material = animal1;
 				} else if (type == 2) {
 						newAnimal.transform.Find ("Plane").GetComponent<Renderer> ().material = animal2;
