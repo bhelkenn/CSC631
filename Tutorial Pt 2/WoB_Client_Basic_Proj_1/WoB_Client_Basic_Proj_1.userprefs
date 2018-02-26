@@ -1,10 +1,10 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/ScaleAnimals.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/TestSceneScript2.cs">
     <Files>
-      <File FileName="Assets/Scripts/TestSceneScript2.cs" Line="5" Column="26" />
+      <File FileName="Assets/Scripts/TestSceneScript2.cs" Line="71" Column="31" />
       <File FileName="Assets/Scripts/Login.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/TestSceneScript.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/TestSceneScript.cs" Line="10" Column="26" />
       <File FileName="Assets/Scripts/Main.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/ScaleAnimals.cs" Line="22" Column="62" />
     </Files>

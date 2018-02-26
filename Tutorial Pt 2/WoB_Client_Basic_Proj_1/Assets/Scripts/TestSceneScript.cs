@@ -5,9 +5,9 @@ using UnityEngine.UI;
 
 
 public class TestSceneScript : MonoBehaviour {
-		public GameObject terrainNew;
-		public Button btn;
-		private Rect windowRect;
+	public GameObject terrainNew;
+	public Button btn;
+	private Rect windowRect;
 	// Use this for initialization
 	void Start () {
 		GameObject terrainOld = GameObject.Find ("MaasaiMara");

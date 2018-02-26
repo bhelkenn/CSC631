@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class TestSceneScript2 : MonoBehaviour {
@@ -8,12 +9,18 @@ public class TestSceneScript2 : MonoBehaviour {
 	public Material animal1;
 	public Material animal2;
 	public Material animal3;
-	public float timeToScaleOver;
-	public Vector3 scaleFactor; // desired factor to scale animal size to
+	public Text scoreboardDummy;
+	public Text scoreboardAnimal1;
+	public Text scoreboardAnimal2;
+	public Text scoreboardAnimal3;
+	private int dummyCount;
+	private int animal1Count;
+	private int animal2Count;
+	private int animal3Count;
 
 	// Use this for initialization
 	void Start () {
-		//Instantiate(ball,screenPosition,Quaternion.identity);
+		dummyCount = animal1Count = animal2Count = animal3Count = 0;
 		for (var x = 0; x < 5; x++) {
 			MakeAnimal (0);
 		}
@@ -31,6 +38,10 @@ public class TestSceneScript2 : MonoBehaviour {
 			MakeAnimal (3);
 		}
 
+		UpdateScoreboard (scoreboardDummy, dummyCount);
+		UpdateScoreboard (scoreboardAnimal1, animal1Count);
+		UpdateScoreboard (scoreboardAnimal2, animal2Count);
+		UpdateScoreboard (scoreboardAnimal3, animal3Count);
 	}
 
 	void MakeAnimal(int type) {
@@ -39,11 +50,25 @@ public class TestSceneScript2 : MonoBehaviour {
 		newAnimal = Instantiate(dummy, screenPosition, Quaternion.identity) as GameObject;
 
 		if (type == 1) {
-			newAnimal.transform.Find ("Plane").GetComponent<Renderer>().material = animal1;
+			newAnimal.transform.Find ("Plane").GetComponent<Renderer> ().material = animal1;
+			animal1Count++;
 		} else if (type == 2) {
 			newAnimal.transform.Find ("Plane").GetComponent<Renderer> ().material = animal2;
+			animal2Count++;
 		} else if (type == 3) {
 			newAnimal.transform.Find ("Plane").GetComponent<Renderer> ().material = animal3;
+			animal3Count++;
+		} else {
+			dummyCount++;
+		}
+	}
+
+	void UpdateScoreboard(Text scoreboard, int count) {
+		if (count > 0) {
+			if (!scoreboard.enabled) scoreboard.enabled = true;
+			scoreboard.text = scoreboard.name + ": " + count.ToString();
+		} else {
+			scoreboard.enabled = false;
 		}
 	}
 }
