@@ -46,6 +46,7 @@ public class ConnectionManager : MonoBehaviour {
 		}
 		
 		if (theStream.DataAvailable) {
+			Debug.Log ("Data Available");
 			byte[] buffer = new byte[2];
 			theStream.Read(buffer, 0, 2);
 			short bufferSize = BitConverter.ToInt16(buffer, 0);

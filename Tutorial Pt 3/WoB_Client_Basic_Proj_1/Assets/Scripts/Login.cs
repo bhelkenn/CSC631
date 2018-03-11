@@ -9,7 +9,7 @@ using UnityEngine.UI;
 
 public class Login : MonoBehaviour {
 	
-	//private GameObject mainObject;
+	private GameObject mainObject;
 	// Window Properties
 	private float width = 280;
 	private float height = 100;
@@ -17,14 +17,16 @@ public class Login : MonoBehaviour {
 	public Texture background;
 	private string user_id = "";
 	private string password = "";
+	private int money = 0;
+	private short level = 0;
 	private Rect windowRect;
 	private bool isHidden;
 	public Button btn;
 	
 	void Awake() {
-		//mainObject = GameObject.Find("MainObject");
+		mainObject = GameObject.Find("MainObject");
 
-		//mainObject.GetComponent<MessageQueue>().AddCallback(Constants.SMSG_AUTH, ResponseLogin);
+		mainObject.GetComponent<MessageQueue> ().AddCallback (Constants.SMSG_AUTH, ResponseLogin);
 	}
 	
 	// Use this for initialization
@@ -88,18 +90,22 @@ public class Login : MonoBehaviour {
 			Debug.Log("Password Required");
 			GUI.FocusControl("password_field");
 		} else {
-			//ConnectionManager cManager = mainObject.GetComponent<ConnectionManager>();
+			ConnectionManager cManager = mainObject.GetComponent<ConnectionManager>();
 			
-			//if (cManager) {
-			//	cManager.send(requestLogin(user_id, password));
-			//}
+			if (cManager) {
+				Debug.Log ("username: " + user_id);
+				Debug.Log ("password: " + password);
+				cManager.send (requestLogin (user_id, password));
+			}
+			else
+				Debug.Log ("Failed to submit login");
 		}
 	}
 	
 	public RequestLogin requestLogin(string username, string password) {
 		RequestLogin request = new RequestLogin();
 		request.send(username, password);
-		
+
 		return request;
 	}
 	
@@ -108,6 +114,11 @@ public class Login : MonoBehaviour {
 		
 		if (args.status == 0) {
 			Constants.USER_ID = args.user_id;
+			money = args.money;
+			level = args.level;
+			Debug.Log ("username: " + args.username);
+			Debug.Log ("money: " + args.money);
+			Debug.Log ("level: " + args.level);
 		} else {
 			Debug.Log("Login Failed");
 		}

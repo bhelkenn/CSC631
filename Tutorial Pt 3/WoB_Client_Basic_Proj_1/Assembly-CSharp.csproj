@@ -137,10 +137,10 @@
  <HintPath>/Applications/Unity/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll</HintPath>
  </Reference>
  <Reference Include="Mono.Data.Sqlite">
- <HintPath>/Users/brady/Git Repos/CSC631/Tutorial Pt 2/WoB_Client_Basic_Proj_1/Assets/Plugins/Mono.Data.Sqlite.dll</HintPath>
+ <HintPath>/Users/brady/Git Repos/CSC631/Tutorial Pt 3/WoB_Client_Basic_Proj_1/Assets/Plugins/Mono.Data.Sqlite.dll</HintPath>
  </Reference>
  <Reference Include="System.Data">
- <HintPath>/Users/brady/Git Repos/CSC631/Tutorial Pt 2/WoB_Client_Basic_Proj_1/Assets/Plugins/System.Data.dll</HintPath>
+ <HintPath>/Users/brady/Git Repos/CSC631/Tutorial Pt 3/WoB_Client_Basic_Proj_1/Assets/Plugins/System.Data.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Advertisements">
  <HintPath>/Users/brady/Library/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.3/UnityEngine.Advertisements.dll</HintPath>
